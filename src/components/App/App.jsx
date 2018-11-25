@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-import Btn from 'components/Btn'
-import Logos from 'components/Logos'
-import ClickCounter from 'components/ClickCounter'
+import GuessingGame from 'components/GuessingGame'
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        <Logos />
+        <GuessingGame />
       </div>
     )
   }

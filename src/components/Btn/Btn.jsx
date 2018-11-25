@@ -3,18 +3,18 @@ import styles from './Btn.styl'
 import PropTypes from 'prop-types'
 
 export default class Btn extends Component {
+  checkValue = () => {
+      this.props.checkValueFunc()
+  }
   render() {
     const { className, secondary } = this.props
     return (
       <button
-        {...this.props}
         className={`${secondary ? styles.secondary : styles.primary} ${className} shadow`}
+        onClick={this.checkValue}
       >
-        {this.props.children}
+        {this.props.title}
       </button>
     )
   }
 }
-
-Btn.propTypes = { secondary: PropTypes.bool }
-Btn.defaultProps = { secondary: false }
